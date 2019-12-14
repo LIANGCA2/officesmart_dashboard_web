@@ -1,0 +1,14 @@
+$-flags-png-: './../../assets/images/flags.png';
+
+.zh {
+  width: 18px; height: 18px;
+  background: url($-flags-png-) -10px -10px;
+}
+.ja {
+  width: 18px; height: 18px;
+  background: url($-flags-png-) -48px -10px;
+}
+.en {
+  width: 18px; height: 18px;
+  background: url($-flags-png-) -10px -48px;
+}

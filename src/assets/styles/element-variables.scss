@@ -1,0 +1,60 @@
+$--color-primary: $-primary-color-;
+$--color-danger: $-danger-color-;
+$--color-success: $-success-color-;
+$--color-warning: $-warning-color-;
+$--color-info: $-info-color-;
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import '~element-ui/packages/theme-chalk/src/index';
+
+.el-dropdown-menu {
+  border-radius: 3px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.15), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
+}
+
+.el-dialog__wrapper {
+  .el-dialog__header {
+    padding: 10px 20px;
+    background: $-primary-color-;
+    .el-dialog__title {
+      color: white;
+      font-size: 16px;
+    }
+    .el-dialog__headerbtn {
+      top: 15px;
+      .el-dialog__close {
+        color: white;
+      }
+    }
+  }
+  .el-dialog__body {
+    padding: 20px;
+    color: $-standard-color-;
+  }
+  .el-dialog__footer {
+    padding: 10px 20px 20px 20px;
+  }
+}
+
+
+// EL-FORM
+.el-form {
+  .el-form-item {
+    &.el-form-item--mini {
+      margin-bottom: 12px;
+    }
+    .el-form-item__label {
+      color: $-primary-color-;
+      font-size: 13px;
+    }
+  }
+}
+
+.el-divider__text {
+  background: $-background-color-;
+}
+
+.el-checkbox {
+  &.el-checkbox--mini {
+    margin-right: 6px;
+  }
+}

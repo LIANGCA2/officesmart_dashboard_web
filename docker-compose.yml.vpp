@@ -1,0 +1,18 @@
+version: '2'
+services:
+  cosacz-dashboard-prs:
+    image: ${DOCKER_REGISTRY}/${PROJECT_NAME_LOWERCASE}/${APPLICATION_NAME_LOWERCASE}:${GIT_COMMIT_HASH}
+    ports:
+      - ${COSACZ_DASHBOARD_PRS_PORT}:8080/tcp
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '5'
+    volumes:
+      - ${SERVER_LOG_HOME}/${APPLICATION_NAME}/logs:/var/log/nginx
+    command: npm run start:${DEPLOYMENT_ENV}
+    restart: always
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'

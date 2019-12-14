@@ -1,0 +1,195 @@
+@each $type, $color in (
+        primary: $-primary-color-,
+        danger: $-danger-color-,
+        warning: $-warning-color-,
+        success: $-success-color-,
+        info: $-info-color-,
+        black: $-black-color-,
+        white: $-white-color-,
+        important: $-important-color-,
+        standard: $-standard-color-,
+        light: $-light-color-,
+        line: $-line-color-
+) {
+  .#{$type}-bg {
+    background: $color !important;
+    background-color: $color !important;
+  }
+  .el-table .#{$type}-row {
+    background: rgba($color, .1)
+  }
+  .#{$type}-text {
+    color: $color
+  }
+  @for $i from 1 through 10 {
+    .#{$type}-border-#{$i} {
+      border: #{$i}px solid $color
+    }
+  }
+  .icon-btn.#{$type} {
+    color: $-light-color-;
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+@each $type, $color in (
+        primary-gradient: $-primary-gradient-color-,
+        danger-gradient: $-danger-gradient-color-,
+        warning-gradient: $-warning-gradient-color-,
+        success-gradient: $-success-gradient-color-,
+        info-gradient: $-info-gradient-color-
+) {
+  .#{$type}-bg {
+    background: $color
+  }
+}
+
+@each $type in (left, right, center) {
+  .text-align-#{$type} {
+    text-align: $type;
+  }
+}
+
+@for $i from $-font-size-min- through $-font-size-max- {
+  .text-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+@for $i from 1 through 10 {
+  .br-#{$i} {
+    border-radius: #{$i}px
+  }
+}
+
+@for $i from 0 through 20 {
+  .pl-#{$i} {
+    padding-left: #{$i * 3}px;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i * 3}px;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i * 3}px;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i * 3}px;
+  }
+  .px-#{$i} {
+    padding-left: #{$i * 3}px;
+    padding-right: #{$i * 3}px;
+  }
+  .py-#{$i} {
+    padding-top: #{$i * 3}px;
+    padding-bottom: #{$i * 3}px;
+  }
+
+  .ml-#{$i} {
+    margin-left: #{$i * 3}px;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i * 3}px;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i * 3}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i * 3}px;
+  }
+  .mx-#{$i} {
+    margin-left: #{$i * 3}px;
+    margin-right: #{$i * 3}px;
+  }
+  .my-#{$i} {
+    margin-top: #{$i * 3}px;
+    margin-bottom: #{$i * 3}px;
+  }
+}
+
+.full-width {
+  width: 100%
+}
+
+.full-height {
+  height: 100%
+}
+
+.full-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none
+}
+
+.inline-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@each $type in auto, hidden {
+  .ofx-#{$type} {
+    overflow-x: $type
+  }
+  .ofy-#{$type} {
+    overflow-y: $type
+  }
+  .of-#{$type} {
+    overflow: $type
+  }
+}
+
+@each $type in pointer, move, wait, help, not-allowed {
+  .cursor-#{$type} {
+    cursor: $type
+  }
+}
+
+@each $weight in 400, 500, 600, 700, 800, bold, normal {
+  .fw-#{$weight} {
+    font-weight: $weight
+  }
+}
+
+.flex {
+  display: flex
+}
+
+.flex-horizontal {
+  flex-direction: row;
+  &.align-center {
+    align-items: center;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+}
+
+.flex-vertical {
+  flex-direction: column;
+  &.align-center {
+    align-items: center;
+  }
+  &.justify-center {
+    justify-items: center;
+  }
+}
+
+@mixin transition($properties) {
+  transition-property: $properties;
+  transition-duration: 300ms;
+  transition-timing-function: $-cubic-bezier-;
+}

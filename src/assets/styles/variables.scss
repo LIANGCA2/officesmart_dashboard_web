@@ -1,0 +1,39 @@
+$-primary-color-: #006BB7;
+$-secondary-color-: #95BECF;
+$-danger-color-: #DC3545;
+$-success-color-: #2BAF2B;
+$-warning-color-: #F5A623;
+$-info-color-: #78909C;
+$-black-color-: #000;
+$-white-color-: #FFF;
+$-important-color-: #434F65;
+$-standard-color-: #738298;
+$-light-color-: #B4C1D4;
+$-line-color-: #DFDFDF;
+
+$-primary-gradient-color-: linear-gradient($-primary-color-, #4791CF);
+$-warning-gradient-color-: linear-gradient($-warning-color-, #FFD60C);
+$-danger-gradient-color-: linear-gradient($-danger-color-, #F69988);
+$-success-gradient-color-: linear-gradient($-success-color-, #72D572);
+$-info-gradient-color-: linear-gradient($-info-color-, #B0BEC5);
+
+$-background-color-: #FAFAFA;
+$-side-menu-background-color: #FFF;
+$-side-menu-icon-color: #8F9BB3;
+$-side-menu-text-color: #192038;
+$-side-menu-active-color: $-secondary-color-;
+$-side-menu-selected-color: $-primary-color-;
+
+$-font-size-min-: 12;
+$-font-size-max-: 46;
+
+$-font-family-: Open Sans, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif !important;
+$-cubic-bezier-: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+$-min-page-width-: 1024px;
+$-min-page-height-: 600px;
+$-aside-width-: 260px;
+$-aside-min-width-: 59px;
+$-login-form-width-: 430px;
+$-header-height-: 60px;
+$-footer-height-: 22px;
